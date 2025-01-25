@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     if (taskText !== "") {
-      const newTask = document.createElement("li");
-      newTask.textContent = taskText;
+      const li = document.createElement("li");
+      li.textContent = taskText;
 
       const removeButton = document.createElement("button");
       removeButton.textContent = "Remove";
       removeButton.className = "remove-btn";
 
       removeButton.onclick = () => {
-        taskList.removeChild(newTask);
+        taskList.removeChild(li);
       };
-      newTask.appendChild(removeButton);
+      li.appendChild(removeButton);
 
-      taskList.appendChild(newTask);
+      taskList.appendChild(li);
       taskInput.value = "";
     }
   }
